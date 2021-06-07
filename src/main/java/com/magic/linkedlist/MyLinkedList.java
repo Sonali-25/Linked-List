@@ -31,6 +31,11 @@ public class MyLinkedList<K> {
             this.tail = newNode;
         }
     }
+    public INode delete() {
+        INode tempNode =  this.head ;
+        this.head = this.head.getNext();
+        return tempNode;
+    }
     public void printNodes(){
         StringBuffer myNodes = new StringBuffer();
         INode tempNode = head ;
@@ -45,13 +50,14 @@ public class MyLinkedList<K> {
     }
 
     public static void main(String[] args) {
-        MyNode<Integer> myFirstNode = new MyNode<>(56);
+        MyNode<Integer> myFirstNode = new MyNode<>(70);
         MyNode<Integer> mySecondNode = new MyNode<>(30);
-        MyNode<Integer> myThirdNode = new MyNode<>(70);
+        MyNode<Integer> myThirdNode = new MyNode<>(56);
         MyLinkedList myLinkedList = new MyLinkedList();
         myLinkedList.append(myFirstNode);
         myLinkedList.append(mySecondNode);
         myLinkedList.append(myThirdNode);
+        myLinkedList.delete();
         myLinkedList.printNodes();
     }
 
