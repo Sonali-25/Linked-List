@@ -20,6 +20,17 @@ public class MyLinkedList<K> {
             this.head.setNext(tempNode);
         }
     }
+
+    public void append(MyNode newNode) {
+        if(this.head == null )
+            this.head = newNode;
+        if(this.tail == null)
+            this.tail = newNode;
+        else {
+            this.tail.setNext(newNode);
+            this.tail = newNode;
+        }
+    }
     public void printNodes(){
         StringBuffer myNodes = new StringBuffer();
         INode tempNode = head ;
@@ -34,13 +45,13 @@ public class MyLinkedList<K> {
     }
 
     public static void main(String[] args) {
-        MyNode<Integer> myFirstNode = new MyNode<>(70);
+        MyNode<Integer> myFirstNode = new MyNode<>(56);
         MyNode<Integer> mySecondNode = new MyNode<>(30);
-        MyNode<Integer> myThirdNode = new MyNode<>(56);
+        MyNode<Integer> myThirdNode = new MyNode<>(70);
         MyLinkedList myLinkedList = new MyLinkedList();
-        myLinkedList.add(myFirstNode);
-        myLinkedList.add(mySecondNode);
-        myLinkedList.add(myThirdNode);
+        myLinkedList.append(myFirstNode);
+        myLinkedList.append(mySecondNode);
+        myLinkedList.append(myThirdNode);
         myLinkedList.printNodes();
     }
 
