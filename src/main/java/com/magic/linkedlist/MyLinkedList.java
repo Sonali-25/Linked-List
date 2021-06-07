@@ -41,7 +41,15 @@ public class MyLinkedList<K> {
         this.head = this.head.getNext();
         return tempNode;
     }
-   
+    public INode deleteLast(){
+        INode tempNode = this.head;
+        while (!tempNode.getNext().equals(tail)){
+            tempNode = tempNode.getNext();
+        }
+        this.tail = tempNode;
+        tempNode = null;
+        return tempNode;
+    }
 
     public void printNodes(){
         StringBuffer myNodes = new StringBuffer();

@@ -75,5 +75,18 @@ public class MyLinkedListTest {
         boolean result = myLinkedList.head.equals(mySecondNode);
         Assertions.assertTrue(result);
     }
-
+    @Test
+    public void deleteNodeAtLast() {
+        MyNode<Integer> myFirstNode = new MyNode<>(70);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(56);
+        MyLinkedList myLinkedList = new MyLinkedList();
+        myLinkedList.add(myFirstNode);
+        myLinkedList.add(mySecondNode);
+        myLinkedList.add(myThirdNode);
+        myLinkedList.deleteLast();
+        myLinkedList.printNodes();
+        boolean result = myLinkedList.head.equals(mySecondNode);
+        Assertions.assertTrue(result);
+    }
 }
