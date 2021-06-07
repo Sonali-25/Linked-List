@@ -1,7 +1,7 @@
-com/magic/linkedlist/WelcomeClass.java
- com.magic.linkedlist.WelcomeClass
 com/magic/linkedlist/MyNode.java
  com.magic.linkedlist.MyNode
+com/magic/linkedlist/WelcomeClass.java
+ com.magic.linkedlist.WelcomeClass
 com/magic/linkedlist/INode.java
  com.magic.linkedlist.INode
 com/magic/linkedlist/MyLinkedList.java

@@ -1,0 +1,2 @@
+com/magic/linkedlist/MyLinkedListTest.java
+ com.magic.linkedlist.MyLinkedListTest
